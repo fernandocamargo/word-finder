@@ -1,0 +1,41 @@
+.title,
+.item span {
+  display: none;
+}
+
+.items {
+  display: flex;
+}
+
+.item {
+  &:not(:first-child) {
+    margin-left: 0.75rem;
+  }
+
+  &:not(:first-child):before {
+    color: #aaa;
+    content: '/';
+    display: inline-block;
+    margin-right: 0.75rem;
+  }
+
+  &:last-child {
+    a {
+      color: #333;
+      pointer-events: none;
+    }
+  }
+
+  a {
+    color: #3995d9;
+    font-family: 'ek-mukta-regular';
+    font-size: 0.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
